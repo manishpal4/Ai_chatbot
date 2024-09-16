@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import axios from "axios";
+import autoprefixer from "autoprefixer";
 
 function App() {
   const [question, setQuestion] = useState("");
@@ -29,7 +30,7 @@ function App() {
         </span>{" "}
         Chat Bot
       </div>
-      <div className="justify-center items-center flex">
+      <div className="justify-center mx-5 items-center flex">
         <textarea
           className="p-3 w-3/4 my-3 mx-0 resize-none justify-center border-2 rounded-tl-lg rounded-bl-lg border-black"
           rows={1}
@@ -38,9 +39,11 @@ function App() {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
         ></textarea>
-        <button className="bg-green-600 my-5 px-4 py-3.5 rounded-tr-lg rounded-br-lg text-white font-medium justify-center" onClick={generateAwnser}>Generate Awnser</button>
+        <button className="bg-green-600 my-5 px-4 py-1  border-white rounded-tr-lg rounded-br-lg text-white font-medium justify-center " onClick={generateAwnser}>Generate<br/> Awnser</button>
       </div>
-      <textarea className="justify-center items-center flex read-only:  mx-auto p-3 border-none bg-gray-100 rounded-lg" rows={15} cols={160} name="" value={awnser} placeholder="Your Awnser will apear here." id="">{awnser}</textarea>
+      <div className="justify-center mt-3 flex  w-screen">
+      <textarea className=" read-only: w-screen justify-around mx-9 my-0 p-3 border-none bg-gray-100 rounded-lg" rows={1} name="" value={awnser} placeholder="Your Awnser will apear here." id="">{awnser}</textarea>
+      </div>
     </>
   );
 }
