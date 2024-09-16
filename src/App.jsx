@@ -42,7 +42,7 @@ function App() {
         <button className="bg-green-600 my-5 px-4 py-1  border-white rounded-tr-lg rounded-br-lg text-white font-medium justify-center " onClick={generateAwnser}>Generate<br/> Awnser</button>
       </div>
       <div className="justify-center mt-3 flex  w-screen">
-      <textarea className=" read-only: w-screen justify-around mx-9 my-0 p-3 border-none bg-gray-100 rounded-lg" rows={1} name="" value={awnser} placeholder="Your Awnser will apear here." id="">{awnser}</textarea>
+      <textarea className=" read-only: w-screen justify-around mx-9 my-0 p-3 border-none bg-gray-100 rounded-lg" rows={12} name="" value={awnser} placeholder="Your Awnser will apear here." id="">{awnser}</textarea>
       </div>
     </>
   );
